@@ -34,7 +34,7 @@ const pieData = [
 
 const Row2 = () => {
   const { palette } = useTheme();
-  const pieColors = [palette.primary[800], palette.primary[300]];
+  const pieColors = ["#076050", "#71f5de"];
   const { data: operationalData } = useGetKpisQuery();
   const { data: productData } = useGetProductsQuery(); // le llamo a la data como productData
   // console.log("data graphic d:", operationalData);
@@ -131,7 +131,7 @@ const Row2 = () => {
               yAxisId="left"
               type="monotone"
               dataKey={keyMap["Non Operational Expenses"]}
-              stroke={palette.tertiary[500]}
+              stroke="#8884d8"
             />
             <Line
               yAxisId="right"
@@ -174,7 +174,7 @@ const Row2 = () => {
           {/* FlexBasis es una version de width hecha para FlexBox y que se adapta de acuerdo a las circunstancias */}
           <Box ml="-0.7rem" flexBasis="40%" textAlign="center">
             <Typography variant="h5">Objetivos de ventas</Typography>
-            <Typography m="0.3rem 0" variant="h3" color={palette.primary[300]}>
+            <Typography m="0.3rem 0" variant="h3" color="#71f5de">
               83
             </Typography>
             <Typography variant="h6">
@@ -228,7 +228,7 @@ const Row2 = () => {
             <ZAxis type="number" range={[20]} />
             {/* <YAxis type="number" dataKey="y" name="weight" unit="kg" /> */}
             <Tooltip formatter={(v) => `$${v}`} />
-            <Scatter name="Product Expense Ratio" data={productExpenseData} fill={palette.tertiary[500]} />
+            <Scatter name="Product Expense Ratio" data={productExpenseData} fill="#8884d8" />
           </ScatterChart>
         </ResponsiveContainer>
       </DashboardBox>

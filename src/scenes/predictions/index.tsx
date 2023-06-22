@@ -98,7 +98,7 @@ const Predictions = () => {
                 strokeDasharray="5 5"
                 // dataKey="Predicted Revenue" 
                 dataKey={keyMap["Predicted Revenue"]} 
-                stroke= {palette.secondary[500]} 
+                stroke= "#f2b455"
                 
                 /> 
             )}

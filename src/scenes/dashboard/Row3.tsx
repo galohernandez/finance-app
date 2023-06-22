@@ -12,6 +12,9 @@ import { DataGrid, GridCellParams } from "@mui/x-data-grid";
 import { useMemo } from "react";
 import { Cell, Pie, PieChart } from "recharts";
 
+//chatgpt suggestion para el problema de 800 500 de palette
+
+//fin chatgpt
 
 interface CategoryTranslations {
   [key: string]: string;
@@ -23,9 +26,13 @@ const categoryTranslations: CategoryTranslations = {
   services: "servicios",
 };
 
+
+
 const Row3 = () => {
+  // Use your custom theme type with `useTheme`
+  // const theme = useTheme() as MyTheme;
   const { palette } = useTheme();
-  const pieColors = [palette.primary[800], palette.primary[500]];
+  const pieColors = ["#076050", "#12efc8"];
   const { data: transactionData } = useGetTransactionsQuery(); // se usa el Transactions Query
   const { data: productData } = useGetProductsQuery(); // se usa el Product
   const { data: kpiData } = useGetKpisQuery(); // se usa tambios los KPIs
@@ -215,12 +222,12 @@ const Row3 = () => {
         <Box
           height="15px"
           margin="1.25rem 1rem 0.4rem 1rem"
-          bgcolor={palette.primary[800]}
+          bgcolor="#076050"
           borderRadius="1rem"
         >
           <Box
             height="15px"
-            bgcolor={palette.primary[600]}
+            bgcolor="#0ebfa0"
             borderRadius="1rem"
             width="40%"
           ></Box>
