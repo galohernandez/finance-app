@@ -4,9 +4,9 @@ import AnalyticsIcon from "@mui/icons-material/Analytics";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-type Props = unknown;
 
-const Navbar = (props: Props) => {
+
+const Navbar = () => {
   const { palette } = useTheme();
   const [selected, setSelected] = useState("dashboard");
   return (
